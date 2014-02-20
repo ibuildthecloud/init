@@ -41,7 +41,7 @@ if echo "${USER_DATA}" | grep -q '^https://'; then
 
 	echo "Downloading contents of URL: ${USER_DATA}"
 
-	USER_DATA="$(curl -s $USER_DATA)"
+	USER_DATA="$(curl -L -s $USER_DATA)"
 fi
 
 # Create temporary file that gets cleaned up on exit
